@@ -1,0 +1,25 @@
+<%-include("./partials/header") %>
+
+<%-include("./partials/nav") %>
+<div class="form w-full  bg-blue-300 p-5 flex gap-10
+flex-wrap">
+
+
+ <% allposts.forEach((post)=>{%>
+    <div class=" w-1/5 bg-zinc-100  p-10 rounded-lg p-10">
+        <h1><%=post.title%></h1>
+        <br>
+        <h1><%=post.description%></h1>
+    
+        <br>
+        <div>
+            <img src="/images/<%=post.image%>" alt="">
+        </div>
+        <a href="/deletepost/<%=post._id%>">delete</a>
+      </div>
+  <%})%>
+
+</div>
+
+
+<%-include("./partials/footer") %>

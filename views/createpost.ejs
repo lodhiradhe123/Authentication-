@@ -1,0 +1,20 @@
+<%-include("./partials/header") %>
+
+<div class="form w-full h-screen bg-pink-300 p-1">
+<%-include("./partials/nav") %>
+
+  <h1 class="text-3xl text-blue-500 text-center capitalize font-bold">createpost</h1>
+
+  <div class="formdiv w-1/2 bg-green-100  p-10 rounded-lg ml-80">
+    <form action="/createpost/<%=user._id%>" method="post" enctype="multipart/form-data">
+      <input type="text" name="title" id="" placeholder="enter your title" class="w-full text-3xl rounded-lg p-2 border-2 border-black mb-5">
+      <input type="text" name="description" id="" placeholder="enter your description" class="w-full text-3xl rounded-lg p-2 border-2 border-black mb-5">
+      <input type="file" name="image" id=""  class="w-full text-3xl rounded-lg p-2 border-2 border-black mb-5">
+      <input value="createpost" type="submit" name="" id="" class="w-1/4 text-3xl rounded-lg p-2 border-2 border-black mb-5 ml-60">
+    </form>
+  </div>
+
+</div>
+
+
+<%-include("./partials/footer") %>

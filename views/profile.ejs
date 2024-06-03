@@ -1,0 +1,39 @@
+<%-include("./partials/header") %>
+<%-include("./partials/nav") %>
+
+<div class="w-full h-screen bg-pink-300 text-center">
+    <h1>profile page</h1>
+    <div class="image w-32 h-32 bg-green-100 rounded-full ml-[45%] object-cover overflow-hidden object-cover bg-center">
+        <img src="/images/<%=user.img%>" alt="" class="w-full object-cover bg-center my-3"> 
+    </div>
+    <div class="content w-32 h-32 bg-green-100 rounded-lg ml-[45%] object-cover overflow-hidden object-cover bg-center">
+        <h1><%=user.name%></h1>
+        <br>
+        <h1><%=user.email%></h1>
+    </div>
+    <form action="/upload/<%=user._id%>" method="post" enctype="multipart/form-data" class="formsbm hidden">
+        <input type="file" name="img" id="" class="image-input ">
+        <input type="submit" name="" id="">
+    </form>
+    <br>
+    <br>
+
+<a href="/resetpassword" class="border-2 border-black bg-green-100">resetpassword</a>
+<br>
+<br>
+<a href="/update" class="border-2 border-black bg-green-100">update</a>
+<br>
+<br>
+
+<a href="/delete/<%=user._id%>" class="border-2 border-black bg-green-100">delete</a>
+
+<br>
+<br>
+<br>
+
+<a href="/createpost" class="border-2 border-black bg-green-100">createpost</a>
+
+
+
+</div>
+<%-include("./partials/footer") %>
